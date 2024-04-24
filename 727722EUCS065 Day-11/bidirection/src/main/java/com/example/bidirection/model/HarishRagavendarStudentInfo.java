@@ -15,7 +15,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class StudentInfo {
+public class HarishRagavendarStudentInfo {
     @Id
     private int id;
     private String address;
@@ -23,5 +23,5 @@ public class StudentInfo {
 
     @JsonBackReference
     @OneToOne(cascade = CascadeType.ALL)
-    private Student student;
+    private HarishRagavendarStudent student;
 }

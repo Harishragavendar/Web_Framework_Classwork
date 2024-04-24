@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.*;
-import com.example.springapp.model.HarishRagavendarPerson;
+import com.example.springapp.model.HarishRagavendarHarishRagavendarPerson;
 import com.example.springapp.service.HarishRagavendarPersonService;
 
 @RestController
 public class HarishRagavendarPersonController {
-    @Autowired
+    @AutowireHarishRagavendard
     private HarishRagavendarPersonService ser;
     
     @PostMapping("/api/person")
-    public ResponseEntity<HarishRagavendarPerson> post(@RequestBody HarishRagavendarPerson person)
+    public ResponseEntity<HarishRagavendarHarishRagavendarPerson> post(@RequestBody HarishRagavendarHarishRagavendarPerson person)
     {
         if(ser.post(person))
         {
@@ -30,9 +30,9 @@ public class HarishRagavendarPersonController {
     }
 
     @GetMapping("/api/person")
-    public ResponseEntity<List<HarishRagavendarPerson>> getAll()
+    public ResponseEntity<List<HarishRagavendarHarishRagavendarPerson>> getAll()
     {
-        List<HarishRagavendarPerson> li = ser.getAll();
+        List<HarishRagavendarHarishRagavendarPerson> li = ser.getAll();
         if(li.size()>0)
         {
             return new ResponseEntity<>(li,HttpStatus.OK);
@@ -43,9 +43,9 @@ public class HarishRagavendarPersonController {
     }
 
     @GetMapping("/api/person/byAge")
-    public ResponseEntity<List<HarishRagavendarPerson>> getbyAge(@RequestParam int age)
+    public ResponseEntity<List<HarishRagavendarHarishRagavendarPerson>> getbyAge(@RequestParam int age)
     {
-        List<HarishRagavendarPerson> li = ser.getbyAge(age);
+        List<HarishRagavendarHarishRagavendarPerson> li = ser.getbyAge(age);
         if(li.size()>0)
         {
             return new ResponseEntity<>(li,HttpStatus.OK);

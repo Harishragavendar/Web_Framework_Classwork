@@ -12,7 +12,7 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Student {
+public class HarishRagavendarStudent {
     @Id
     private int id;
     private String name;

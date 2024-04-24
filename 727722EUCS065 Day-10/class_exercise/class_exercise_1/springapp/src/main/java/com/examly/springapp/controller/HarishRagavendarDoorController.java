@@ -14,20 +14,20 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.examly.springapp.model.Door;
-import com.examly.springapp.service.DoorService;
+import com.examly.springapp.model.HarishRagavendarDoor;
+import com.examly.springapp.service.HarishRagavendarDoorService;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @RequestMapping("/api")
-public class DoorController {
+public class HarishRagavendarDoorController {
 
     @Autowired
-    public DoorService doorService;
+    public HarishRagavendarDoorService doorService;
 
     @PostMapping("/door")
-    public ResponseEntity<Door> postData(@RequestBody Door door) {
-        Door doorData = doorService.postData(door);
+    public ResponseEntity<HarishRagavendarDoor> postData(@RequestBody HarishRagavendarDoor door) {
+        HarishRagavendarDoor doorData = doorService.postData(door);
         if (doorData != null) {
             return new ResponseEntity<>(doorData, HttpStatus.CREATED);
         } else {
@@ -37,8 +37,8 @@ public class DoorController {
     }
 
     @GetMapping("door/bycolor/{color}")
-    public ResponseEntity<List<Door>> getBycolor(@PathVariable String color) {
-        List<Door> door = doorService.getBycolor(color);
+    public ResponseEntity<List<HarishRagavendarDoor>> getBycolor(@PathVariable String color) {
+        List<HarishRagavendarDoor> door = doorService.getBycolor(color);
         if (door != null) {
             return new ResponseEntity<>(door, HttpStatus.OK);
         } else {
@@ -48,8 +48,8 @@ public class DoorController {
     }
 
     @PutMapping("door/{doorid}")
-    public ResponseEntity<Door> updateDetailResponseEntity(@PathVariable int doorid, @RequestBody Door door) {
-        Door doorData = doorService.updateDetail(doorid, door);
+    public ResponseEntity<HarishRagavendarDoor> updateDetailResponseEntity(@PathVariable int doorid, @RequestBody HarishRagavendarDoor door) {
+        HarishRagavendarDoor doorData = doorService.updateDetail(doorid, door);
         if (doorData != null) {
             return new ResponseEntity<>(doorData, HttpStatus.OK);
         } else {
@@ -67,8 +67,8 @@ public class DoorController {
     }
 
     @GetMapping("/door/bydoortype/{doortype}")
-    public ResponseEntity<List<Door>> getByDoor(@PathVariable String doortype) {
-        List<Door> door = doorService.getByDoorType(doortype);
+    public ResponseEntity<List<HarishRagavendarDoor>> getByDoor(@PathVariable String doortype) {
+        List<HarishRagavendarDoor> door = doorService.getByDoorType(doortype);
         if (door != null) {
             return new ResponseEntity<>(door, HttpStatus.OK);
         } else {
@@ -77,8 +77,8 @@ public class DoorController {
     }
 
     @GetMapping("/door")
-    public ResponseEntity<List<Door>> getAllDetails() {
-        List<Door> door = doorService.getAllDetails();
+    public ResponseEntity<List<HarishRagavendarDoor>> getAllDetails() {
+        List<HarishRagavendarDoor> door = doorService.getAllDetails();
         if (door != null) {
 
             return new ResponseEntity<>(door, HttpStatus.OK);
@@ -89,8 +89,8 @@ public class DoorController {
     }
 
     @GetMapping("/door/{doorid}")
-    public ResponseEntity<Door> getDetailsById(@PathVariable int doorid) {
-        Door door = doorService.getDetailsById(doorid);
+    public ResponseEntity<HarishRagavendarDoor> getDetailsById(@PathVariable int doorid) {
+        HarishRagavendarDoor door = doorService.getDetailsById(doorid);
         if (door != null) {
             return new ResponseEntity<>(door, HttpStatus.OK);
         } else {

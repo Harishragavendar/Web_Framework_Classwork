@@ -5,23 +5,23 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.examly.springapp.model.Door;
-import com.examly.springapp.repository.DoorRepo;
+import com.examly.springapp.model.HarishRagavendarDoor;
+import com.examly.springapp.repository.HarishRagavendarDoorRepo;
 
 @Service
-public class DoorService {
+public class HarishRagavendarDoorService {
     @Autowired
-    private DoorRepo doorRepo;
+    private HarishRagavendarDoorRepo doorRepo;
 
-    public Door postData(Door door) {
+    public HarishRagavendarDoor postData(HarishRagavendarDoor door) {
         return doorRepo.save(door);
     }
 
-    public List<Door> getBycolor(String color) {
+    public List<HarishRagavendarDoor> getBycolor(String color) {
         return doorRepo.findByColor(color);
     }
 
-    public Door updateDetail(int doorid, Door door) {
+    public HarishRagavendarDoor updateDetail(int doorid, HarishRagavendarDoor door) {
         return doorRepo.save(door);
     }
 
@@ -30,16 +30,16 @@ public class DoorService {
         return true;
     }
 
-    public List<Door> getByDoorType(String doortype) {
+    public List<HarishRagavendarDoor> getByDoorType(String doortype) {
         return doorRepo.findByDoorType(doortype);
     }
 
-    public List<Door> getAllDetails() {
+    public List<HarishRagavendarDoor> getAllDetails() {
 
         return doorRepo.findAll();
     }
 
-    public Door getDetailsById(int doorid) {
+    public HarishRagavendarDoor getDetailsById(int doorid) {
         return doorRepo.findById(doorid).orElse(null);
     }
 

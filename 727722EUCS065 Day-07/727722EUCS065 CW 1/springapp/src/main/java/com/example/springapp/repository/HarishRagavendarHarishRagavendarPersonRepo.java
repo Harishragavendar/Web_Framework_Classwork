@@ -7,7 +7,7 @@ import java.util.List;
 
 
 @Repository
-public interface HarishRagavendarPersonRepo extends JpaRepository<Person,Integer>{
+public interface HarishRagavendarHarishRagavendarPersonRepo extends JpaRepository<Person,Integer>{
 
     List<Person> findByAge(int age);
     

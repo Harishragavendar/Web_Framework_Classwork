@@ -19,7 +19,7 @@ import com.example.springapp.service.ProductService;
 
 @RestController
 @RequestMapping("/api")
-public class ProductController {
+public class HarishRagavendarProductController {
 
     @Autowired
     private ProductService productService;

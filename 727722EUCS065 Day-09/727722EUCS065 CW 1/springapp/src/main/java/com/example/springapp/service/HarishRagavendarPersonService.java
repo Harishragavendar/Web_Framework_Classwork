@@ -8,7 +8,7 @@ import com.example.springapp.model.Person;
 import com.example.springapp.repository.PersonRepo;
 
 @Service
-public class PersonService {
+public class HarishRagavendarPersonService {
     public PersonRepo personRepo;
 
     public PersonService(PersonRepo personRepo) {

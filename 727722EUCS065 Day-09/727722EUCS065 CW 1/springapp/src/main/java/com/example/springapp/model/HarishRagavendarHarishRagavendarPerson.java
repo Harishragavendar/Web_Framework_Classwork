@@ -4,7 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class HarishRagavendarPerson {
+public class HarishRagavendarHarishRagavendarPerson {
     @Id
     private int personId;
     private String firstName;
@@ -12,8 +12,8 @@ public class HarishRagavendarPerson {
     private int age;
     private String gender;
 
-    public HarishRagavendarPerson(){}
-    public HarishRagavendarPerson() {
+    public HarishRagavendarHarishRagavendarPerson(){}
+    public HarishRagavendarHarishRagavendarPerson() {
     }
 
     public Person(int personId, String firstName, String lastName, int age, String gender, String email) {

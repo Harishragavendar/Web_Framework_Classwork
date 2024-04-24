@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.example.relation.model.StudentInfo;
 
 @Repository
-public interface StudentInfoRepository extends JpaRepository<StudentInfo,Integer>{
+public interface HarishRagavendarStudentInfoRepository extends JpaRepository<StudentInfo,Integer>{
     
 }

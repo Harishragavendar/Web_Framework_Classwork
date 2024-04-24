@@ -5,12 +5,12 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.example.relation.model.Student;
-import com.example.relation.repository.StudentRepository;
+import com.example.relation.repository.HarishRagavendarStudentRepository;
 
 @Service
 public class StudentService {
-    public StudentRepository studentRepository;
-    public StudentService(StudentRepository studentRepository)
+    public HarishRagavendarStudentRepository studentRepository;
+    public StudentService(HarishRagavendarStudentRepository studentRepository)
     {
         this.studentRepository = studentRepository;
     }

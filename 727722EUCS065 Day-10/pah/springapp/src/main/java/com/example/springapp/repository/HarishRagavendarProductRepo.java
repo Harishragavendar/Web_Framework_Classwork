@@ -12,7 +12,7 @@ import com.example.springapp.model.Product;
 import jakarta.transaction.Transactional;
 
 @Repository
-public interface ProductRepo extends JpaRepository<Product, Integer> {
+public interface HarishRagavendarProductRepo extends JpaRepository<Product, Integer> {
     
     @Query(value = "SELECT p FROM Product p WHERE p.category = ?1")
     public List<Product> findByCategoryList(String category);

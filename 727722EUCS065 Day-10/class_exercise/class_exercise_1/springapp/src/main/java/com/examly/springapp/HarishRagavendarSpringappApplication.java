@@ -1,13 +1,13 @@
-package com.example.relation;
+package com.examly.springapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RelationApplication {
+public class HarishRagavendarSpringappApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RelationApplication.class, args);
+		SpringApplication.run(HarishRagavendarSpringappApplication.class, args);
 	}
 
 }

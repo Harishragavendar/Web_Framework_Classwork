@@ -13,7 +13,7 @@ import com.example.springapp.model.Person;
 import com.example.springapp.service.PersonService;
 
 @RestController
-public class PersonController {
+public class HarishRagavendarPersonController {
     @Autowired
     private PersonService ser;
 

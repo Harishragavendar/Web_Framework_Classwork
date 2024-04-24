@@ -7,17 +7,17 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.examly.springapp.model.Door;
+import com.examly.springapp.model.HarishRagavendarDoor;
 
 // import jakarta.transaction.Transactiona
 
 @Repository
-public interface DoorRepo extends JpaRepository<Door, Integer> {
+public interface HarishRagavendarDoorRepo extends JpaRepository<HarishRagavendarDoor, Integer> {
 
     @Query(value = "DELETE FROM Door WHERE Door_id = ?1", nativeQuery = true)
     void deleteDoor(int DoorId);
 
-    public List<Door> findByColor(String color);
+    public List<HarishRagavendarDoor> findByColor(String color);
 
-    public List<Door> findByDoorType(String doortype);
+    public List<HarishRagavendarDoor> findByDoorType(String doortype);
 }

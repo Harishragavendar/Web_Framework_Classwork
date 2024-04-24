@@ -14,12 +14,12 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Student {
+public class HarishRagavendarStudent {
     @Id
     private int id;
     private String name;
 
     @JsonManagedReference
     @OneToOne(mappedBy = "student" , cascade = CascadeType.ALL)
-    private StudentInfo studentInfo;
+    private HarishRagavendarStudentInfo studentInfo;
 }
